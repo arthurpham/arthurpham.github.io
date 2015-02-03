@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="description" content="This is a demo site for Nikola.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arthur Pham | Arthur Pham</title>
+
+                <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/code.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/colorbox.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+
+      <link rel="canonical" href="http://www.arthurpham.com/index.html">
+
+
+
+
+    
+        <!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+
+    
+
+
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.arthurpham.com/">
+
+                <span id="blog-title">Arthur Pham</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                                <li>
+<a href="archive.html">Archive</a>
+                </li>
+<li>
+<a href="categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+            </ul>
+        </div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav>
+
+<!-- End of Menubar -->
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<div class="postindex">
+    <article class="h-entry post-text">
+    <header>
+        <h1 class="p-name entry-title"><a href="posts/first-post.html" class="u-url">First Post</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Arthur Pham</span></p>
+            <p class="dateline"><a href="posts/first-post.html" rel="bookmark"><time class="published dt-published" datetime="2015-02-02T18:50:17-05:00" itemprop="datePublished" title="Publication date">2015-02-02 18:50</time></a></p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header>
+    <div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">bscall</span><span class="p">(</span><span class="n">strike</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">mat</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">fwd</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">sig</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">df</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">lnfs</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1.0</span><span class="o">*</span><span class="n">fwd</span><span class="o">/</span><span class="n">strike</span><span class="p">)</span>
+    <span class="n">sig2t</span> <span class="o">=</span> <span class="n">sig</span><span class="o">*</span><span class="n">sig</span><span class="o">*</span><span class="n">mat</span>
+    <span class="n">sigsqrt</span> <span class="o">=</span> <span class="n">sig</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+    <span class="n">d1</span> <span class="o">=</span> <span class="p">(</span><span class="n">lnfs</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sig2t</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigsqrt</span>
+    <span class="n">d2</span> <span class="o">=</span> <span class="p">(</span><span class="n">lnfs</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sig2t</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigsqrt</span>
+    <span class="n">fv</span> <span class="o">=</span> <span class="n">fwd</span> <span class="o">*</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span> <span class="p">(</span><span class="n">d1</span><span class="p">)</span> <span class="o">-</span> <span class="n">strike</span> <span class="o">*</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span> <span class="p">(</span><span class="n">d2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span> <span class="o">*</span> <span class="n">fv</span>
+
+<span class="k">print</span> <span class="n">bscall</span><span class="p">(</span><span class="n">fwd</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">strike</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">sig</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">mat</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">df</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+3.98776116767
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article>
+</div>
+
+        
+
+        </div>
+        <!--End of body content-->
+
+        <footer>
+            Contents © 2015         <a href="mailto:arthur@arthurpham.com">Arthur Pham</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+    </div>
+</div>
+
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/moment-with-locales.min.js"></script>
+            <script src="assets/js/fancydates.js"></script>
+        <script src="assets/js/mathjax.js"></script>
+        <script src="assets/js/jquery.colorbox-min.js"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+    <script>jQuery("a.image-reference,!.islink").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+    <!-- fancy dates -->
+    <script>
+    moment.locale("");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script>
+    <!-- end fancy dates -->
+
+
+</body>
+</html>
