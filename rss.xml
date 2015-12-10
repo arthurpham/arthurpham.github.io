@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Arthur Pham</title><link>http://www.arthurpham.com/</link><description>This is a demo site for Nikola.</description><atom:link href="http://www.arthurpham.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 02 Feb 2015 22:37:49 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>First Post</title><link>http://www.arthurpham.com/posts/first-post.html</link><dc:creator>Arthur Pham</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Arthur Pham</title><link>http://www.arthurpham.com/</link><description>This is a demo site for Nikola.</description><atom:link href="http://www.arthurpham.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Thu, 10 Dec 2015 02:17:59 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>First Post</title><link>http://www.arthurpham.com/posts/first-post.html</link><dc:creator>Arthur Pham</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scipy.stats&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;norm&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scipy.stats&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;norm&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;bscall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;strike&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;mat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;fwd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;sig&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -19,7 +19,7 @@
     &lt;span class="n"&gt;fv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fwd&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;norm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdf&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;strike&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;norm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdf&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;fv&lt;/span&gt;
 
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;bscall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fwd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;strike&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sig&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bscall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fwd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;strike&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sig&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -32,9 +32,7 @@
 
 &lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;
-3.98776116767
-
+&lt;pre&gt;3.98776116767
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
