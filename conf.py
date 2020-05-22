@@ -21,11 +21,12 @@ BLOG_AUTHOR = "Arthur Pham"  # (translatable)
 BLOG_TITLE = "Arthur Pham"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
-SITE_URL = "http://www.arthurpham.com/"
+SITE_URL = "https://arthurpham.github.io/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://www.arthurpham.com"
-BLOG_EMAIL = "arthur@arthurpham.com"
+#BLOG_EMAIL = "arthur@arthurpham.com"
+BLOG_EMAIL = ""
 BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
 
 # Nikola is multilingual!
@@ -128,8 +129,8 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
-#THEME = "bootstrap3"
-THEME = "ipython"
+THEME = "bootstrap4"
+#THEME = "ipython"
 
 # Below this point, everything is optional
 
@@ -601,7 +602,7 @@ LICENSE = ""
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+CONTENT_FOOTER = 'Contents &copy; {date}         <a href="https://twitter.com/arthurpham">{author}</a>'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
