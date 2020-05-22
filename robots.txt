@@ -1,4 +1,4 @@
-Sitemap: http://www.arthurpham.com/sitemapindex.xml
+Sitemap: https://arthurpham.github.io/sitemapindex.xml
 
 User-Agent: *
-Host: www.arthurpham.com
+Host: arthurpham.github.io
